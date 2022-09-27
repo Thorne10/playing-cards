@@ -1,19 +1,25 @@
 package com.tlglearning.cards.model;
 
 public enum Suit {
-  CLUBS('\u2663'),
-  DIAMONDS('\u2662'),
-  HEARTS('\u2661'),
-  SPADES('\u2660');
+  CLUBS('\u2663', Color.BLACK),
+  DIAMONDS('\u2662', Color.RED),
+  HEARTS('\u2661', Color.RED),
+  SPADES('\u2660', Color.BLACK);
 
   private final char symbol;
+  private final Color color;
 
-  private Suit(char symbol) {
+  Suit(char symbol, Color color) {
     this.symbol = symbol;
+    this.color = color;
   }
 
   public char symbol() {
     return symbol;
+  }
+
+  public Color color (){
+    return color;
   }
 
 
@@ -25,6 +31,10 @@ public enum Suit {
     return name.charAt(0) + name.substring(1).toLowerCase();
   }
 
+  public enum Color {
+    BLACK,RED
+
+  }
 
 
 }
