@@ -1,4 +1,4 @@
-package com.tlglearning.cards.model;
+package com.tlglearning.cards.strategy.model;
 
 import java.util.Objects;
 
